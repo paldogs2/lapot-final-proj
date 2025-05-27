@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURGER LAPOTS | Delicious Burgers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BURGER LAPOTS</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="home">
+        <h1>BURGER LAPOTS</h1>
+        <p>Tikman ang pinakamakatas at pinakamasarap na burgers sa bayan. Gawa sa 100% premium na baka at pinakasariwang sangkap.</p>
+        <button class="btn" id="orderNowBtn">Order Now</button>
+    </section>
+    
+    <section class="menu" id="menu">
+        <h2>Our Delicious Burgers</h2>
+        <div class="burgers-container" id="burgersContainer">
+        </div>
+    </section>
+    
+    <section class="cart-section" id="cart">
+        <div class="cart-container">
+            <h2>Your Order</h2>
+            <div class="cart-items" id="cartItems">
+                <p id="emptyCartMessage">Your cart is empty. Add some delicious burgers!</p>
+            </div>
+            <div class="cart-total" id="cartTotal">
+                Total: ₱0.00
+            </div>
+            <form id="addressForm" class="address-form">
+                <h3>Delivery Details</h3>
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="text" id="addressLine1" placeholder="Address Line 1" required>
+                <input type="text" id="addressLine2" placeholder="Address Line 2 (Optional)">
+                <input type="text" id="city" placeholder="City" required>
+                <input type="text" id="state" placeholder="State/Province" required>
+                <input type="text" id="zipCode" placeholder="Zip Code" required pattern="\d{4,5}">
+                <button type="submit" class="btn" id="submitAddressBtn">Proceed to Checkout</button>
+            </form>
+        </div>
+    </section>
+    
+    <div class="modal" id="receiptModal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h2>Order Confirmation</h2>
+            <div id="receiptDetails"></div>
+            <div class="order-status" id="orderStatus">Processing...</div>
+            <button class="btn" id="confirmOrderBtn">Confirm Order</button>
+            <button class="btn" id="closeReceiptBtn">Cancel</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="loadingModal">
+        <div class="modal-content loading">
+            <div class="spinner"></div>
+            <p>Processing your order...</p>
+        </div>
+    </div>
+    
+    <footer id="contact">
+        <p>© 2025 BURGER LAPOTS. All rights reserved.</p>
+        <p>San Teodoro Bunawan ADS, Millionare's | Phone: +63 9323255425
+        </p>
+    </footer>
+    
+    <script src="javascript.js"></script>
+</body>
+</html>
